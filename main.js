@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const images = document.querySelectorAll("img");
   const modal = document.getElementById("modal");
   const modalImage = document.getElementById("modal-image");
+  const body = document.querySelector("body");
+  const button = document.getElementById("dark-mode");
 
   images.forEach((image) => {
     image.addEventListener("click", function (event) {
@@ -16,6 +18,16 @@ document.addEventListener("DOMContentLoaded", function () {
     if (ev.target === modal || ev.target === modalImage) {
       modal.classList.add("invisible");
       modalImage.src = "";
+    }
+  });
+
+  button.addEventListener("click", function (ev) {
+    if (body.classList.contains("dark")) {
+      body.classList.remove("dark");
+      button.textContent = "dark mode";
+    } else {
+      body.classList.add("dark");
+      button.textContent = "light mode";
     }
   });
 });

@@ -14,19 +14,25 @@
     <title>Gallery</title>
   </head>
   <body>
+    <button
+      id="dark-mode"
+      class="absolute bg-charcoal-800 text-charcoal-100 dark:text-charcoal-800 dark:bg-charcoal-100 rounded-3xl px-3 font-h1 right-4 top-4 duration-1000"
+    >
+      dark mode
+    </button>
     <div id="modal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center invisible z-10">
       <div id="modal-content" class="relative max-w-[90%] max-h-[90%]">
         <img id="modal-image" src="" alt="" class="max-w-full max-h-full" />
       </div>
     </div>
-    <section class="text-charcoal-100 bg-charcoal-800 pb-8">
+    <section class="text-charcoal-800 bg-charcoal-100 dark:text-charcoal-100 dark:bg-charcoal-800 pb-8">
       <div class="flex flex-col items-center mx-auto container py-40 px-4">
         <div class="flex -space-x-1.5 mb-2">
-          <div class="w-4 h-4 rounded-full bg-orange-500 mix-blend-lighteen opacity-75"></div>
-          <div class="w-4 h-4 rounded-full bg-fuchsia-500 mix-blend-lighteen opacity-75"></div>
-          <div class="w-4 h-4 rounded-full bg-blue-500 mix-blend-lighteen opacity-75"></div>
+          <div class="w-4 h-4 rounded-full bg-orange-500 mix-blend-color-normal opacity-75"></div>
+          <div class="w-4 h-4 rounded-full bg-fuchsia-500 mix-blend-color-normal opacity-75"></div>
+          <div class="w-4 h-4 rounded-full bg-blue-500 mix-blend-color-normal opacity-75"></div>
         </div>
-        <h1 class="text-3xl text-center md:text-5xl text-white font-h1">tailwind gallery</h1>
+        <h1 class="text-3xl text-center md:text-5xl font-h1">tailwind gallery</h1>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-3 items-center mx-auto gap-4 container max-w-5xl group">
         <a href="#" class="cursor-pointer">
